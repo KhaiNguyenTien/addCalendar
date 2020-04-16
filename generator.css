@@ -1,0 +1,166 @@
+/* --------------------
+  this css is embedded in the script in
+  minified version. it is here for reference
+  only
+-------------------- */
+
+.add-to-calendar {
+  position: relative;
+  text-align: left;
+}
+
+.add-to-calendar > * {
+  display:none;
+}
+
+.add-to-calendar > .add-to-calendar-widget {
+  display:block;
+}
+
+.add-to-calendar-label {
+  cursor: pointer;
+}
+
+.add-to-calendar-checkbox + div.add-to-calendar-dropdown {
+  display: none;
+  margin-left: 10px;
+}
+
+.add-to-calendar-checkbox:checked + div.add-to-calendar-dropdown {
+  display: block;
+}
+
+input[type=checkbox].add-to-calendar-checkbox {
+  position: absolute;
+  visibility:hidden;
+}
+
+.add-to-calendar-checkbox + div.add-to-calendar-dropdown a {
+  cursor:pointer;
+  display:block;
+}
+
+.add-to-calendar-checkbox + div.add-to-calendar-dropdown a:before {
+  width: 39px;
+  height: 39px;
+  display: inline-block;
+  margin-right: .5em;
+  content: ' ';
+  margin-top:-10px;
+}
+
+.icon-ical:before {
+  margin-right:10px;
+  background-image:url('./apple.svg');
+  background-position:-5px 16px;
+  background-repeat: no-repeat;
+}
+
+.icon-outlook:before {
+  /*this is the default icon*/
+  margin-right:10px;
+  background-image:url('./outlook.svg');
+  background-position:-5px 16px;
+  background-repeat: no-repeat;
+}
+.icon-outlookonline:before {
+  /*this is the default icon*/
+  margin-right:10px;
+  background-image:url('./outlookonline.svg');
+  background-position:-5px 16px;
+  background-repeat: no-repeat;
+}
+
+.icon-off365:before {
+  /*this is the default icon*/
+  margin-right:10px;
+  background-image:url('./office365.svg');
+  background-position:-5px 17px;
+  background-repeat: no-repeat;
+}
+
+
+.icon-yahoo:before {
+   margin-right:10px;
+  background-image:url('./yahoo.svg');
+  background-position:-5px 17px;
+  background-repeat: no-repeat;
+}
+
+.icon-google:before {
+  background-position: -52px 0;
+}
+.icon-test:before {
+  margin-right:10px;
+  background-image:url('./google.svg');
+  background-position:-5px 16px;
+  background-repeat: no-repeat;
+}
+.testtext {
+  font-size: 15pt; 
+  color:#333333; 
+  font-family: "Open Sans",Roboto,"Helvetica Neue"; 
+}
+.testtext1 {font-size: 12pt; 
+  color:#999999; 
+  font-family: "Open Sans",Roboto,"Helvetica Neue";
+  }
+.testtext2 {font-size: 14pt; 
+  color:#333333; 
+  font-family: "Open Sans",Roboto,"Helvetica Neue";
+  }
+/* --------------------
+    prettify
+-------------------- */
+
+.add-to-calendar-widget {
+  font-family:sans-serif;
+  margin: 1em 0;
+  position:relative;
+}
+
+.add-to-calendar-label {
+  display: inline-block;
+  background-color: white;
+  background-image:url('./calendar.svg');
+  background-position:10px 14px;
+  background-repeat:no-repeat;
+  padding: 1em 1em 1em 40px;
+  background-size: 20px 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 0.5px rgba(50, 50, 93, .17), 
+    0 2px 5px 0 rgba(50, 50, 93, .1), 
+    0 1px 1.5px 0 rgba(0, 0, 0, .07), 
+    0 1px 2px 0 rgba(0, 0, 0, .08), 
+    0 0 0 0 transparent!important;  
+}
+
+.add-to-calendar-dropdown  {
+  position: absolute;
+  z-index: 99;
+  opacity:1;
+  background-color: white;
+  top: 0;
+  left:0;
+  padding: 1em;
+  margin:0!important;
+  border-radius: 3px;
+  box-shadow: 0 0 0 0.5px rgba(50, 50, 93, .17), 
+    0 2px 5px 0 rgba(50, 50, 93, .1), 
+    0 1px 1.5px 0 rgba(0, 0, 0, .07), 
+    0 1px 2px 0 rgba(0, 0, 0, .08), 
+    0 0 0 0 transparent!important;
+}
+
+.add-to-calendar-dropdown a {
+  display: block;
+  line-height: 1.75em;
+  text-decoration: none;
+  color: inherit;
+  
+}
+
+.add-to-calendar-dropdown a:hover {
+  color:  white;
+  background-color:   #E8E8E8;
+}

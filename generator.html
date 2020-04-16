@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="add-to-calendar.js"></script>
+    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="generator.css">
+    <title>Oui2 - AddToCalendar Embed Code Generator</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>OUI2 Add To Calendar - Embed Code Generator</h1>
+    </header>
+    <h3>Widget from javascript input</h3>
+    <p>
+      The example below  created a calendar from javascript data. Check the source to see how that's done.
+      <br><br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <div class="container-test"></div>
+    </p>
+    <script > 
+        
+        // create a calendar by hand
+        
+        var ouical = addToCalendar({
+          options: {
+            class: 'my-class',
+            id: 'my-id'                               // If you don't pass an id, one will be generated for you.
+          },
+          data: {
+            title: 'Get on the front page of \'HN\'',     // Event title
+            start: new Date('June 15, 2013 19:00'),     // Event start date
+            // timezone: America/Los_Angeles,           // converts the time to the IANA timezone 
+            end: new Date('June 15, 2013 23:00'),       // If an end time is set, this will take precedence over duration
+            // duration: 120,                           // Event duration (IN MINUTES)
+            // allday: true,                            // Override end time, duration and timezone, triggers 'all day'
+            address: 'The internet',
+            description: 'Get on the front page of "HN", then prepare for World Domination.'
+          }
+        });
+
+        document.querySelector('.container-test').appendChild(ouical);
+        </script>
+        
+    </script>
+  </body>
+</html>
