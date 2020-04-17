@@ -199,6 +199,7 @@
           'STATUS:CONFIRMED',
           'ORGANIZER;CN='+(event.organizer || '')+':MAILTO:'+(event.organizer_email || ''),
           'DESCRIPTION:' + (event.description || ''),
+          'X-ALT-DESC;FMTTYPE=text/html:'+(event.description || ''),
           'LOCATION:' + (event.address || ''),        
           'UID:' + (event.id || '') + '-' + document.URL,
           'END:VEVENT',
