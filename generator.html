@@ -19,27 +19,31 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       <div class="container-test"></div>
     </p>
+    <span class="event-title">Get on the front page of \'HN\ </span>
+    <span class="event-start"> </span>
+    <span class="event-end"> </span>
+    <span class="event-address"> The internet</span>
+    <span class="event-description"> <a href="https://github.com/KhaiNguyenTien/addCalendar"> Link website </a> Hello, Its me Kai  </span>
+    <span class="event-organizer">Rakuna</span>
+    <span class="event-organizer-email">support@rakuna.co</span>
     <script > 
-        
+        // get data for calendar
+        var etitle=document.querySelector(".event-title").textContent;
+        var estart=document.querySelector(".event-start").textContent;
+        var eend =document.querySelector(".event-end").textconCent;
+        var eaddress=document.querySelector(".event-address").textContent;
+        var edescription=document.querySelector(".event-description").textContent;
+        var eorganizer=document.querySelector(".event-organizer").textContent;
+        var eorganizermail=document.querySelector(".event-organizer-email").textContent;
         // create a calendar by hand
+        var edata={etitle,estart,eend,eaddress,edescription,eorganizer,eorganizermail};
         
         var ouical = addToCalendar({
           options: {
             class: 'my-class',
             id: 'my-id'                               // If you don't pass an id, one will be generated for you.
           },
-          data: {
-            title: 'Get on the front page of \'HN\'',     // Event title
-            start: new Date('June 15, 2013 19:00'),     // Event start date
-            // timezone: America/Los_Angeles,           // converts the time to the IANA timezone 
-            end: new Date('June 15, 2013 23:00'),       // If an end time is set, this will take precedence over duration
-            // duration: 120,                           // Event duration (IN MINUTES)
-            // allday: true,                            // Override end time, duration and timezone, triggers 'all day'
-            address: 'The internet',
-            description: 'Get on the front page of "HN", then prepare for World Domination. https://github.com/KhaiNguyenTien/addCalendar',
-            organizer: "Rakuna",
-            organizer_email:"support@rakuna.co"
-          }
+          edata
         });
 
         document.querySelector('.container-test').appendChild(ouical);
