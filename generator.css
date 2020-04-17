@@ -51,7 +51,7 @@ input[type=checkbox].add-to-calendar-checkbox {
 
 .icon-ical:before {
   margin-right:10px;
-  background-image:url('./apple.svg');
+  background-image:url('./icon/apple.svg');
   background-position:-5px 16px;
   background-repeat: no-repeat;
 }
@@ -59,14 +59,14 @@ input[type=checkbox].add-to-calendar-checkbox {
 .icon-outlook:before {
   /*this is the default icon*/
   margin-right:10px;
-  background-image:url('./outlook.svg');
+  background-image:url('./icon/outlook.svg');
   background-position:-5px 16px;
   background-repeat: no-repeat;
 }
 .icon-outlookonline:before {
   /*this is the default icon*/
   margin-right:10px;
-  background-image:url('./outlookonline.svg');
+  background-image:url('./icon/outlookonline.svg');
   background-position:-5px 16px;
   background-repeat: no-repeat;
 }
@@ -74,7 +74,7 @@ input[type=checkbox].add-to-calendar-checkbox {
 .icon-off365:before {
   /*this is the default icon*/
   margin-right:10px;
-  background-image:url('./office365.svg');
+  background-image:url('./icon/office365.svg');
   background-position:-5px 17px;
   background-repeat: no-repeat;
 }
@@ -82,7 +82,7 @@ input[type=checkbox].add-to-calendar-checkbox {
 
 .icon-yahoo:before {
    margin-right:10px;
-  background-image:url('./yahoo.svg');
+  background-image:url('./icon/yahoo.svg');
   background-position:-5px 17px;
   background-repeat: no-repeat;
 }
@@ -92,7 +92,7 @@ input[type=checkbox].add-to-calendar-checkbox {
 }
 .icon-test:before {
   margin-right:10px;
-  background-image:url('./google.svg');
+  background-image:url('./icon/google.svg');
   background-position:-5px 16px;
   background-repeat: no-repeat;
 }
@@ -122,7 +122,7 @@ input[type=checkbox].add-to-calendar-checkbox {
 .add-to-calendar-label {
   display: inline-block;
   background-color: white;
-  background-image:url('./calendar.svg');
+  background-image:url('./icon/calendar.svg');
   background-position:10px 14px;
   background-repeat:no-repeat;
   padding: 1em 1em 1em 40px;
