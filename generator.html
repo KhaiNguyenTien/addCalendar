@@ -20,8 +20,8 @@
       <div class="container-test"></div>
     </p>
     <span class="event-title">Get on the front page of \'HN\ </span>
-    <span class="event-start"> </span>
-    <span class="event-end"> </span>
+    <span class="event-start">June 15, 2013 19:00</span>
+    <span class="event-end">June 15, 2013 23:00</span>
     <span class="event-address"> The internet</span>
     <span class="event-description"> <a href="https://github.com/KhaiNguyenTien/addCalendar"> Link website </a> Hello, Its me Kai  </span>
     <span class="event-organizer">Rakuna</span>
@@ -30,7 +30,7 @@
         // get data for calendar
         var title=document.querySelector(".event-title").textContent;
         var start=document.querySelector(".event-start").textContent;
-        var end =document.querySelector(".event-end").textconCent;
+        var end =document.querySelector(".event-end").textContent;
         var address=document.querySelector(".event-address").textContent;
         var description=document.querySelector(".event-description").textContent;
         var organizer=document.querySelector(".event-organizer").textContent;
@@ -43,7 +43,18 @@
             class: 'my-class',
             id: 'my-id'                               // If you don't pass an id, one will be generated for you.
           },
-          data
+          data:{
+            title: document.querySelector(".event-title").textContent+'',     // Event title
+            start: new Date(document.querySelector(".event-start").textContent+''),     // Event start date
+            // timezone: America/Los_Angeles,           // converts the time to the IANA timezone 
+            end: new Date(document.querySelector(".event-end").textContent+''),       // If an end time is set, this will take precedence over duration
+            // duration: 120,                           // Event duration (IN MINUTES)
+            // allday: true,                            // Override end time, duration and timezone, triggers 'all day'
+            address: document.querySelector(".event-address").textContent,
+            description: document.querySelector(".event-description").textContent,
+            organizer: document.querySelector(".event-organizer").textContent,
+            organizer_email:document.querySelector(".event-organizer-email").textContent
+          }
         });
 
         document.querySelector('.container-test').appendChild(ouical);
