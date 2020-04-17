@@ -32,7 +32,7 @@
         var start=document.querySelector(".event-start").textContent;
         var end =document.querySelector(".event-end").textContent;
         var address=document.querySelector(".event-address").textContent;
-        var description=document.querySelector(".event-description").textContent;
+        var description=document.querySelector(".event-description");
         var organizer=document.querySelector(".event-organizer").textContent;
         var organizer_mail=document.querySelector(".event-organizer-email").textContent;
         // create a calendar by hand
@@ -44,14 +44,14 @@
             id: 'my-id'                               // If you don't pass an id, one will be generated for you.
           },
           data:{
-            title: document.querySelector(".event-title").textContent+'',     // Event title
+            title: document.querySelector(".event-title").textContent,     // Event title
             start: new Date(document.querySelector(".event-start").textContent+''),     // Event start date
             // timezone: America/Los_Angeles,           // converts the time to the IANA timezone 
             end: new Date(document.querySelector(".event-end").textContent+''),       // If an end time is set, this will take precedence over duration
             // duration: 120,                           // Event duration (IN MINUTES)
             // allday: true,                            // Override end time, duration and timezone, triggers 'all day'
             address: document.querySelector(".event-address").textContent,
-            description: document.querySelector(".event-description").textContent,
+            description: document.querySelector(".event-description").outerHTML,
             organizer: document.querySelector(".event-organizer").textContent,
             organizer_email:document.querySelector(".event-organizer-email").textContent
           }
