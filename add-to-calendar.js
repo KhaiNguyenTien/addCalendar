@@ -403,6 +403,9 @@
     node = elm.querySelector('.organizer');
     if (node) data.organizer = node.textContent;
 
+    node = elm.querySelector('.organizer_email');
+    if (node) data.organizer_email = node.textContent;
+
     node = elm.querySelector('.start');
     if (node) data.start = new Date(node.textContent);
     
@@ -434,7 +437,7 @@
     cal = createCalendar({data:data});
     if (cal) elm.appendChild(cal);
     return cal;
-       
+
   }
   
   /* --------------
