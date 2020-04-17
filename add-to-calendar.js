@@ -198,6 +198,7 @@
           'SUMMARY:' + (event.title || ''),
           'DESCRIPTION:' + (event.description || ''),
           'LOCATION:' + (event.address || ''),
+          'ORGANIZER:' + (event.organizer || ''),
           'UID:' + (event.id || '') + '-' + document.URL,
           'END:VEVENT',
           'END:VCALENDAR'].join('\n');
@@ -422,8 +423,9 @@
     if (!data.address) {
       node = elm.querySelector('.location');
       if (node) data.address = node.textContent;
-    }
-    
+    }   
+    node = elm.querySelector('.organizer');
+    if (node) data.organizer = node.textContent;
     node = elm.querySelector('.timezone');
     if (node) data.timezone = node.textContent;
     
