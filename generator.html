@@ -28,22 +28,22 @@
     <span class="event-organizer-email">support@rakuna.co</span>
     <script > 
         // get data for calendar
-        var etitle=document.querySelector(".event-title").textContent;
-        var estart=document.querySelector(".event-start").textContent;
-        var eend =document.querySelector(".event-end").textconCent;
-        var eaddress=document.querySelector(".event-address").textContent;
-        var edescription=document.querySelector(".event-description").textContent;
-        var eorganizer=document.querySelector(".event-organizer").textContent;
-        var eorganizermail=document.querySelector(".event-organizer-email").textContent;
+        var title=document.querySelector(".event-title").textContent;
+        var start=document.querySelector(".event-start").textContent;
+        var end =document.querySelector(".event-end").textconCent;
+        var address=document.querySelector(".event-address").textContent;
+        var description=document.querySelector(".event-description").textContent;
+        var organizer=document.querySelector(".event-organizer").textContent;
+        var organizer_mail=document.querySelector(".event-organizer-email").textContent;
         // create a calendar by hand
-        var edata={etitle,estart,eend,eaddress,edescription,eorganizer,eorganizermail};
+        var data={title,start,end,address,description,organizer,organizer_mail};
         
         var ouical = addToCalendar({
           options: {
             class: 'my-class',
             id: 'my-id'                               // If you don't pass an id, one will be generated for you.
           },
-          edata
+          data
         });
 
         document.querySelector('.container-test').appendChild(ouical);
