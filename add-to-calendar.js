@@ -196,9 +196,10 @@
           'DTSTART:' + (startTime || ''),
           'DTEND:' + (endTime || ''),
           'SUMMARY:' + (event.title || ''),
+          'STATUS:CONFIRMED',
+          'ORGANIZER;CN='+(event.organizer || '')+':MAILTO:'+(event.organizer_email || ''),
           'DESCRIPTION:' + (event.description || ''),
-          'LOCATION:' + (event.address || ''),
-          'ORGANIZER:' + (event.organizer || ''),
+          'LOCATION:' + (event.address || ''),        
           'UID:' + (event.id || '') + '-' + document.URL,
           'END:VEVENT',
           'END:VCALENDAR'].join('\n');
@@ -399,12 +400,6 @@
     */
 
     var data = {}, node;
-
-    node = elm.querySelector('.organizer');
-    if (node) data.organizer = node.textContent;
-
-    node = elm.querySelector('.organizer_email');
-    if (node) data.organizer_email = node.textContent;
 
     node = elm.querySelector('.start');
     if (node) data.start = new Date(node.textContent);
