@@ -399,7 +399,10 @@
     */
 
     var data = {}, node;
-    
+
+    node = elm.querySelector('.organizer');
+    if (node) data.organizer = node.textContent;
+
     node = elm.querySelector('.start');
     if (node) data.start = new Date(node.textContent);
     
@@ -424,15 +427,14 @@
       node = elm.querySelector('.location');
       if (node) data.address = node.textContent;
     }   
-    node = elm.querySelector('.organizer');
-    if (node) data.organizer = node.textContent;
+    
     node = elm.querySelector('.timezone');
     if (node) data.timezone = node.textContent;
     
     cal = createCalendar({data:data});
     if (cal) elm.appendChild(cal);
     return cal;
-    
+       
   }
   
   /* --------------
