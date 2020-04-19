@@ -142,7 +142,8 @@
     off365: function(event) {
       var startTime = formatTime(event.tzstart);
       var endTime = formatTime(event.tzend);
-      
+      let parser = new DOMParser()
+      let doc = parser.parseFromString(event.description,"text/html")
       var href = encodeURI([
         'https://outlook.office365.com/owa/',
         '?path=/calendar/action/compose',
