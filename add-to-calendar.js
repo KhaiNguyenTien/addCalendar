@@ -160,6 +160,7 @@
     outlookonline:function(event) {
       var startTime = formatTime(event.tzstart);
       var endTime = formatTime(event.tzend);
+    
       
       var href = encodeURI([
         'https://outlook.office365.com/owa/',

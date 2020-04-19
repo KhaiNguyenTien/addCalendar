@@ -19,20 +19,21 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       <div class="container-test"></div>
     </p>
-    <span class="addeventatc" id="addeventatc1" title="" aria-haspopup="true" aria-expanded="false" tabindex="0" translate="no" data-loaded="true" style="visibility: visible;">
-  Add to Calendar
-  <span class="start atc_node notranslate">2020-04-20 19:25</span>
-  <span class="end atc_node notranslate">2020-04-20 23:25</span>
-  <span class="timezone atc_node notranslate">UTC</span>
-  <span class="title atc_node notranslate">Ly Sunday Testing Event</span>
-  <span class="description atc_node notranslate"><div class="rc atc_node notranslate" data-hveid="CAoQAQ" data-ved="2ahUKEwjY8rWmoOLoAhUVI6YKHdwpDy8QFSgAMAB6BAgKEAE" style="position: relative; color: rgb(34, 34, 34); font-family: arial, sans-serif;"><div class="s atc_node notranslate" style="max-width: 48em; color: rgb(60, 64, 67); line-height: 1.58;"><span class="st atc_node notranslate" style="line-height: 1.58; overflow-wrap: break-word;">The&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT</span>&nbsp;Fall&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">Career Fair</span>&nbsp;is&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT's</span>&nbsp;largest recruiting event of the year and the only&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT</span>-wide&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">career fair</span>&nbsp;to be held in the fall. It is open to companies and&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT</span>&nbsp;students of all disciplines and degree programs. We invite you to participate in this event to connect with highly talented students in the&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT</span>&nbsp;community.</span></div><div class="atc_node"><span class="st atc_node notranslate" style="line-height: 1.58; overflow-wrap: break-word;"><br class="atc_node"></span><a href="https://github.com/KhaiNguyenTien/addCalendar"> Link website </a></div></div></span>
-  <span class="location atc_node notranslate">M.I.T, Massachusetts Avenue, Cambridge, MA, USA</span>
-  <span class="organizer atc_node notranslate">Rakuna Secure App</span>
-  <span class="organizer_email atc_node notranslate">support@rakuna.co</span>
-  </span>
-    
-    <script > 
+    <span class="start atc_node notranslate">2020-04-20 19:25</span>
+    <span class="end atc_node notranslate">2020-04-20 23:25</span>
+    <span class="timezone atc_node notranslate">UTC</span>
+    <span class="title atc_node notranslate">Ly Sunday Testing Event</span>
+    <span class="description atc_node notranslate"><div class="rc atc_node notranslate" data-hveid="CAoQAQ" data-ved="2ahUKEwjY8rWmoOLoAhUVI6YKHdwpDy8QFSgAMAB6BAgKEAE" style="position: relative; color: rgb(34, 34, 34); font-family: arial, sans-serif;"><div class="s atc_node notranslate" style="max-width: 48em; color: rgb(60, 64, 67); line-height: 1.58;"><span class="st atc_node notranslate" style="line-height: 1.58; overflow-wrap: break-word;">The&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT</span>&nbsp;Fall&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">Career Fair</span>&nbsp;is&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT's</span>&nbsp;largest recruiting event of the year and the only&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT</span>-wide&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">career fair</span>&nbsp;to be held in the fall. It is open to companies and&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT</span>&nbsp;students of all disciplines and degree programs. We invite you to participate in this event to connect with highly talented students in the&nbsp;<span style="font-weight: bold; color: rgb(82, 86, 90);" class="atc_node">MIT</span>&nbsp;community.</span></div><div class="atc_node"><span class="st atc_node notranslate" style="line-height: 1.58; overflow-wrap: break-word;"><br class="atc_node"></span><a href="https://github.com/KhaiNguyenTien/addCalendar"> Link website </a></div></div></span>
+    <span class="location atc_node notranslate">M.I.T, Massachusetts Avenue, Cambridge, MA, USA</span>
+    <span class="organizer atc_node notranslate">Rakuna Secure App</span>
+    <span class="organizer_email atc_node notranslate">support@rakuna.co</span>
+      <script > 
         // get data for calendar
+        var leng=document.getElementsByClassName("atc_node").length
+        var i;
+        for( i=0; i<leng;i++){
+          document.getElementsByClassName("atc_node")[i].removeAttribute("style");
+        }
         
         var ouical = addToCalendar({
           options: {
@@ -41,9 +42,9 @@
           },
           data:{
             title: document.querySelector(".title.atc_node.notranslate").textContent,     // Event title
-            start: new Date(document.querySelector(".start.atc_node.notranslate").textContent+''),     // Event start date
+            start: new Date(document.querySelector(".start.atc_node.notranslate").textContent),     // Event start date
             // timezone: America/Los_Angeles,           // converts the time to the IANA timezone 
-            end: new Date(document.querySelector(".end.atc_node.notranslate").textContent+''),       // If an end time is set, this will take precedence over duration
+            end: new Date(document.querySelector(".end.atc_node.notranslate").textContent),       // If an end time is set, this will take precedence over duration
             // duration: 120,                           // Event duration (IN MINUTES)
             // allday: true,                            // Override end time, duration and timezone, triggers 'all day'
             address: document.querySelector(".location.atc_node.notranslate").textContent,
